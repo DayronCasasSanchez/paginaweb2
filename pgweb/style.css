@@ -1,0 +1,152 @@
+header{
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    background-color: #c8d0e4;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+/* estilo para inicio tienda etc */
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.logo img{
+    height: 75px;
+    margin-right: 20px;
+}
+/* carrito */
+nav img{
+    height: 30px;
+    margin-left: 20px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a :hover{
+    color: white;
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+.promo-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url('zapatilla.jpg'); /* Cambia esta URL a tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Texto superpuesto */
+.promo-text {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animación del texto */
+.promo-text h1 {
+    font-size: 3em;
+    animation: slideIn 2s ease-out;
+}
+
+.promo-text p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-out;
+}
+
+/* Botón de llamada a la acción */
+.promo-text .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #5176dd; /* Color del botón */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+    transition: background-color 0.3s;
+}
+
+.promo-text .cta-button:hover {
+    background-color: #5176dd;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos para cada categoría */
+.category {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+/* Efecto de desvanecimiento al pasar el ratón */
+.category:hover img {
+    opacity: 0.7;
+}
+
+/* Texto de la categoría */
+.category h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
